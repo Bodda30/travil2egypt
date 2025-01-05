@@ -56,8 +56,9 @@ languageToggle.addEventListener('click', function() {
     // Update navigation links
     navLinks[0].textContent = isKorean ? '우리에 대해' : 'About';
     navLinks[1].textContent = isKorean ? '갤러리' : 'Gallery';
-    navLinks[2].textContent = isKorean ? '여행 계획' : 'Plan Your Trip';
-    navLinks[3].textContent = isKorean ? '문의하기' : 'Contact';
+    navLinks[2].textContent = isKorean ? '차량 선택' : 'Choose your car';
+    navLinks[3].textContent = isKorean ? '여행 계획' : 'Plan Your Trip';
+    navLinks[4].textContent = isKorean ? '문의하기' : 'Contact';
 
     // Update services section
     const servicesTitle = servicesSection.querySelector('h2');
@@ -100,7 +101,8 @@ languageToggle.addEventListener('click', function() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId) || document.getElementById(`kr-${targetId}`);
         target.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
@@ -127,17 +129,30 @@ fadeInElements.forEach(element => {
 
 // Scroll to Contact Section
 function scrollToContact() {
-    const contactSection = document.getElementById('contact');
-    window.scrollTo({
-        top: contactSection.offsetTop - 60, // Offset for header
-        behavior: 'smooth'
-    });
+    const isKorean = document.body.classList.contains('show-korean');
+    const contactSection = isKorean ? 
+        document.querySelector('#contact.korean') : 
+        document.querySelector('#contact.english');
+        
+    if (contactSection) {
+        const headerOffset = 60;
+        const elementPosition = contactSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
 }
 
 // Add event listeners to "Book Now" buttons
 const bookNowButtons = document.querySelectorAll('.service-button');
 bookNowButtons.forEach(button => {
-    button.addEventListener('click', scrollToContact);
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToContact();
+    });
 });
 
 // Add transition styles
@@ -163,14 +178,19 @@ const viewer = {
 
     show(imgSrc) {
         this.image.src = imgSrc;
-        document.body.style.overflow = 'hidden';
         this.container.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        this.container.style.opacity = '1';
+        this.container.style.transition = 'opacity 0.3s ease';
     },
 
     hide() {
-        this.container.classList.remove('active');
+        this.container.style.opacity = '0';
         document.body.style.overflow = '';
-        setTimeout(() => this.image.src = '', 300);
+        setTimeout(() => {
+            this.container.classList.remove('active');
+            this.image.src = '';
+        }, 300);
     },
 
     init() {
@@ -204,32 +224,27 @@ const viewer = {
 // Initialize immediately
 viewer.init();
 
-// Update form labels and placeholders
-document.addEventListener('DOMContentLoaded', () => {
-    const isKorean = body.classList.contains('show-korean');
-    const forms = {
-        tripFormEnglish: document.getElementById('tripFormEnglish'),
-        tripFormKorean: document.getElementById('tripFormKorean')
-    };
+// Email Submission Logic
+function handleEmailSubmission(event) {
+    event.preventDefault();
+    const emailInput = document.getElementById('email-input');
+    const email = emailInput.value;
 
-    // Update form labels and placeholders
-    Object.values(forms).forEach(form => {
-        if (form) {
-            form.querySelectorAll('label, input[placeholder], textarea[placeholder]').forEach(element => {
-                const key = element.dataset.translate;
-                if (key && translations.forms[key]) {
-                    if (element.tagName === 'LABEL') {
-                        element.textContent = translations.forms[key][isKorean ? 1 : 0];
-                    } else {
-                        element.placeholder = translations.forms[key][isKorean ? 1 : 0];
-                    }
-                }
-            });
-        }
-    });
-});
+    if (validateEmail(email)) {
+        alert('Thank you for subscribing!');
+        emailInput.value = '';
+    } else {
+        alert('Please enter a valid email address.');
+    }
+}
 
-// Update alert messages
-function showAlert(type, message) {
-    alert(translations.alerts[type][body.classList.contains('show-korean') ? 1 : 0] + ' ' + message);
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+// Add event listener to email form
+const emailForm = document.getElementById('email-form');
+if (emailForm) {
+    emailForm.addEventListener('submit', handleEmailSubmission);
 }
