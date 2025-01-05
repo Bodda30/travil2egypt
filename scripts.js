@@ -224,6 +224,11 @@ const viewer = {
 // Initialize immediately
 viewer.init();
 
+// Initialize EmailJS
+(function() {
+    emailjs.init('YOUR_USER_ID'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+})();
+
 // Email Submission Logic
 function handleEmailSubmission(event) {
     event.preventDefault();
@@ -231,8 +236,19 @@ function handleEmailSubmission(event) {
     const email = emailInput.value;
 
     if (validateEmail(email)) {
-        alert('Thank you for subscribing!');
-        emailInput.value = '';
+        sendEmail(email)
+            .then(response => {
+                if (response.status === 200) {
+                    alert('Thank you for subscribing!');
+                    emailInput.value = '';
+                } else {
+                    alert('Failed to send email. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
     } else {
         alert('Please enter a valid email address.');
     }
@@ -241,6 +257,10 @@ function handleEmailSubmission(event) {
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
+}
+
+function sendEmail(email) {
+    return emailjs.send('service_stb1w38', 'template_z4ek1a2', { email: email }); // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS service ID and template ID
 }
 
 // Add event listener to email form
