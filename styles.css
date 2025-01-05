@@ -798,3 +798,81 @@ textarea:focus {
     color: #ccc;
     text-align: center;
   }
+
+/* Choose Your Car Section */
+#chooseCar {
+    padding: 40px 20px;
+    background: #1e1e1e; /* Dark background for sections */
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    backdrop-filter: blur(5px);
+    transition: var(--transition-smooth);
+}
+
+#chooseCar h2 {
+    color: #ffb6c1;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#chooseCar .car-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#chooseCar .car-item {
+    background: rgba(51, 51, 51, 0.8); /* Dark background */
+    color: #ffb6c1; /* Pink text */
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    transition: var(--transition-smooth);
+}
+
+#chooseCar .car-item img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chooseCar .car-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--shadow-soft);
+    border-color: rgba(255, 105, 180, 0.4);
+}
+
+#chooseCar .car-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ffb6c1;
+}
+
+#chooseCar .car-item p {
+    font-size: 1rem;
+    color: #ffb6c1;
+}
+
+/* Responsive Design for Choose Your Car Section */
+@media (max-width: 768px) {
+    #chooseCar .car-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #chooseCar .car-item {
+        max-width: 100%;
+    }
+}
