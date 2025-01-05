@@ -13,7 +13,8 @@
         <button id="language-toggle">Change to Korean</button>
         <nav>
             <a href="#about" class="nav-link">About</a>
-            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#Gallery" class="nav-link">Gallery</a>
+            <a href="#chooseCar" class="nav-link">Choose your car</a>
             <a href="#trip-form" class="nav-link">Plan Your Trip</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
@@ -36,7 +37,7 @@
     </section>
 
     <!-- Gallery Section (English) -->
-    <section id="gallery" class="fade-in english">
+    <section id="Gallery" class="fade-in english">
         <h2>Gallery</h2>
         <div class="carousel">
             <div class="carousel-wrapper">
@@ -63,7 +64,7 @@
     </section>
 
     <!-- Gallery Section (Korean) -->
-    <section id="gallery" class="fade-in korean">
+    <section id="gallery-korean" class="fade-in korean">
         <h2>갤러리</h2>
         <div class="carousel">
             <div class="carousel-wrapper">
@@ -75,13 +76,13 @@
                 </div>
                 <div class="carousel-item">
                     <figure>
-                        <img src="https://source.unsplash.com/800x600/?pyramids" alt="피라미드">
+                        <img src="https://images.unsplash.com/photo-1587975844577-56dfe5d3fca8?q=80&w=2334&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="피라미드">
                         <figcaption>피라미드</figcaption>
                     </figure>
                 </div>
                 <div class="carousel-item">
                     <figure>
-                        <img src="https://images.unsplash.com/photo-1587975844577-56dfe5d3fca8?q=80&w=2334&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="나일강">
+                        <img src="https://source.unsplash.com/800x600/?nile" alt="나일강">
                         <figcaption>나일강</figcaption>
                     </figure>
                 </div>
@@ -122,22 +123,22 @@
          <div class="service-item">
              <span>공항 픽업 서비스</span>
              <span class="price">4 US$</span>
-             <button class="service-button">예약하기</button>
+             <!-- Removed button -->
          </div>
          <div class="service-item">
              <span>카이로 시티 투어</span>
              <span class="price">10 US$</span>
-             <button class="service-button">예약하기</button>
+             <!-- Removed button -->
          </div>
          <div class="service-item">
              <span>맞춤형 당일 여행</span>
              <span class="price">18 US$</span>
-             <button class="service-button">코스 보기</button>
+             <!-- Removed button -->
          </div>
          <div class="service-item">
              <span>시티 투어</span>
              <span class="price">30 US$</span>
-             <button class="service-button">예약하기</button>
+             <!-- Removed button -->
          </div>
      </div>
  </section>
@@ -146,9 +147,38 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     (function () {
-        emailjs.init("your_user_id"); // Replace with your EmailJS user ID
+        emailjs.init("service_stb1w38"); // Replace with your EmailJS user ID
     })();
 </script>
+
+<!-- Choose Your Car Section -->
+<section id="chooseCar">
+    <h2 class="english">Choose Your Car</h2>
+    <h2 class="korean">차량 선택</h2>
+    <div class="car-gallery">
+        <div class="car-item">
+            <img src="path/to/sedan.jpg" alt="Sedan">
+            <h3 class="english">Sedan</h3>
+            <h3 class="korean">세단</h3>
+            <p class="english">Comfortable sedan for city tours</p>
+            <p class="korean">도시 투어를 위한 편안한 세단</p>
+        </div>
+        <div class="car-item">
+            <img src="path/to/suv.jpg" alt="SUV">
+            <h3 class="english">SUV</h3>
+            <h3 class="korean">SUV</h3>
+            <p class="english">Spacious SUV for family trips</p>
+            <p class="korean">가족 여행을 위한 넓은 SUV</p>
+        </div>
+        <div class="car-item">
+            <img src="https://images.unsplash.com/photo-1722088354375-3c64b4d994b6?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Convertible">
+            <h3 class="english">Convertible</h3>
+            <h3 class="korean">컨버터블</h3>
+            <p class="english">Stylish convertible for a fun ride</p>
+            <p class="korean">즐거운 드라이브를 위한 스타일리시한 컨버터블</p>
+        </div>
+    </div>
+</section>
 
 <!-- Plan Trip Section (English) -->
 <section id="trip-form" class="fade-in english">
@@ -169,7 +199,7 @@
 </section>
 
 <!-- Plan Trip Section (Korean) -->
-<section id="trip-form" class="fade-in korean">
+<section id="trip-form-korean" class="fade-in korean">
     <h2>예약문의</h2>
     <form id="tripFormKorean">
         <select name="destination" required>
@@ -180,27 +210,41 @@
         </select>
         <input type="date" name="travel-date" required>
         <input type="number" name="travelers" placeholder="여행자 수" required>
-        <textarea name="message" placeholder="추가 정보"></textarea>
+        <textarea name="message" placeholder="인원/날짜(0박0일)/캐리어갯수"></textarea>
         <input type="email" name="email" placeholder="이메일" required>
         <button type="submit">제출</button>
     </form>
 </section>
 
-    </section>
+<!-- Contact Us Section (English) -->
+<section id="contact" class="fade-in english">
+    <h2>Contact Us</h2>
+    <div class="contact-methods">
+        <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
+            <span>Contact us on WhatsApp</span>
+        </a>
+        <a href="https://open.kakao.com/o/YOUR_KAKAO_LINK" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1200px-KakaoTalk_logo.svg.png" class="contact-icon">
+            <span>Contact us on KakaoTalk</span>
+        </a>
+    </div>
+</section>
 
-    <!-- Contact Section (English) -->
-    <section id="contact" class="fade-in english">
-        <h2>Contact Us</h2>
-        <p>WhatsApp: <a href="https://wa.me/20123456789" target="_blank">+20 123 456 789</a></p>
-        <p>KakaoTalk: <a href="https://kakaotalk.com" target="_blank">@DiscoverEgypt</a></p>
-    </section>
-
-    <!-- Contact Section (Korean) -->
-    <section id="contact" class="fade-in korean">
-        <h2>문의하기</h2>
-        <p>WhatsApp: <a href="https://wa.me/20123456789" target="_blank">+20 123 456 789</a></p>
-        <p>KakaoTalk: <a href="https://kakaotalk.com" target="_blank">@DiscoverEgypt</a></p>
-    </section>
+<!-- Contact Us Section (Korean) -->
+<section id="contact-korean" class="fade-in korean">
+    <h2>문의하기</h2>
+    <div class="contact-methods">
+        <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
+            <span>WhatsApp으로 문의하기</span>
+        </a>
+        <a href="https://open.kakao.com/o/YOUR_KAKAO_LINK" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt="KakaoTalk" class="contact-icon">
+            <span>카카오톡으로 문의하기</span>
+        </a>
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2024 Discover Egypt. All rights reserved.</p>
@@ -219,5 +263,31 @@
     </div>
 
     <script src="scripts.js"></script>
+
+    <style>
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .contact-link:hover {
+            color: #007BFF;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
 </body>
 </html>
