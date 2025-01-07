@@ -219,6 +219,41 @@
 <!-- Contact Us Section (English) -->
 <section id="contact" class="fade-in english">
     <h2>Contact Us</h2>
+    <form action="https://getform.io/f/allldnwa" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <!-- add hidden Honeypot input to prevent spams -->
+        <input type="hidden" name="_gotcha" style="display:none !important">
+        <!-- checkbox handle -->
+        <label>
+            <input type="checkbox" name="subscribe" value="yes" checked>
+            Subscribe to newsletter
+        </label>
+        <input type="hidden" name="subscribe" value="no">
+        <!-- radio button handle -->
+        <label>
+            <input type="radio" name="gender" value="male" checked>
+            Male
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female">
+            Female
+        </label>
+        <label>
+            <input type="radio" name="gender" value="other">
+            Other
+        </label>
+        <!-- select field handle -->
+        <label>
+            Work Experience:
+            <select name="work-experience">
+                <option value="one-year">0-1 years</option>
+                <option value="one-five-years">1-5 years</option>
+            </select>
+        </label>
+        <button type="submit">Send</button>
+    </form>
     <div class="contact-methods">
         <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank" class="contact-link">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
