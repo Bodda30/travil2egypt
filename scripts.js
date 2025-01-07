@@ -268,3 +268,19 @@ const emailForm = document.getElementById('email-form');
 if (emailForm) {
     emailForm.addEventListener('submit', handleEmailSubmission);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('language-toggle');
+    const englishSections = document.querySelectorAll('.english');
+    const koreanSections = document.querySelectorAll('.korean');
+
+    languageToggle.addEventListener('click', function() {
+        englishSections.forEach(section => section.classList.toggle('fade-in'));
+        koreanSections.forEach(section => section.classList.toggle('fade-in'));
+        if (languageToggle.textContent.includes('Korean')) {
+            languageToggle.textContent = 'Change to English';
+        } else {
+            languageToggle.textContent = 'Change to Korean';
+        }
+    });
+});
