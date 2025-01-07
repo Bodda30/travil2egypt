@@ -183,7 +183,7 @@
 <!-- Plan Trip Section (English) -->
 <section id="trip-form" class="fade-in english">
     <h2>Plan Your Trip</h2>
-    <form id="tripFormEnglish">
+    <form id="tripFormEnglish" action="https://getform.io/f/allldnwa" method="POST">
         <select name="destination" required>
             <option value="" disabled selected>Choose a Destination</option>
             <option value="Cairo">Cairo</option>
@@ -194,6 +194,8 @@
         <input type="number" name="travelers" placeholder="Number of Travelers" required>
         <textarea name="message" placeholder="Additional Information"></textarea>
         <input type="email" name="email" placeholder="Your Email" required>
+        <!-- Honeypot input to prevent spam -->
+        <input type="hidden" name="_gotcha" style="display:none !important">
         <button type="submit">Submit</button>
     </form>
 </section>
@@ -201,7 +203,7 @@
 <!-- Plan Trip Section (Korean) -->
 <section id="trip-form-korean" class="fade-in korean">
     <h2>예약문의</h2>
-    <form id="tripFormKorean">
+    <form id="tripFormKorean" action="https://getform.io/f/allldnwa" method="POST">
         <select name="destination" required>
             <option value="" disabled selected>목적지 선택</option>
             <option value="Cairo">카이로</option>
@@ -212,48 +214,15 @@
         <input type="number" name="travelers" placeholder="여행자 수" required>
         <textarea name="message" placeholder="인원/날짜(0박0일)/캐리어갯수"></textarea>
         <input type="email" name="email" placeholder="이메일" required>
+        <!-- Honeypot input to prevent spam -->
+        <input type="hidden" name="_gotcha" style="display:none !important">
         <button type="submit">제출</button>
     </form>
 </section>
 
 <!-- Contact Us Section (English) -->
-<section id="contact" class="fade-in english">
+<section id="contact" class="fade-in english"></section>
     <h2>Contact Us</h2>
-    <form action="https://getform.io/f/allldnwa" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <!-- add hidden Honeypot input to prevent spams -->
-        <input type="hidden" name="_gotcha" style="display:none !important">
-        <!-- checkbox handle -->
-        <label>
-            <input type="checkbox" name="subscribe" value="yes" checked>
-            Subscribe to newsletter
-        </label>
-        <input type="hidden" name="subscribe" value="no">
-        <!-- radio button handle -->
-        <label>
-            <input type="radio" name="gender" value="male" checked>
-            Male
-        </label>
-        <label>
-            <input type="radio" name="gender" value="female">
-            Female
-        </label>
-        <label>
-            <input type="radio" name="gender" value="other">
-            Other
-        </label>
-        <!-- select field handle -->
-        <label>
-            Work Experience:
-            <select name="work-experience">
-                <option value="one-year">0-1 years</option>
-                <option value="one-five-years">1-5 years</option>
-            </select>
-        </label>
-        <button type="submit">Send</button>
-    </form>
     <div class="contact-methods">
         <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank" class="contact-link">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
@@ -270,7 +239,7 @@
 <section id="contact-korean" class="fade-in korean">
     <h2>문의하기</h2>
     <div class="contact-methods">
-        <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank" class="contact-link">
+        <a href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER" target="_blank" class="contact-link"></a>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
             <span>WhatsApp으로 문의하기</span>
         </a>
