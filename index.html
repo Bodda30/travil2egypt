@@ -215,7 +215,7 @@
 <!-- Plan Trip Section (English) -->
 <section id="trip-form" class="fade-in english">
     <h2>Plan Your Trip</h2>
-    <form id="tripFormEnglish" action="https://getform.io/f/allldnwa" method="POST">
+    <form id="tripFormEnglish">
         <select name="destination" required>
             <option value="" disabled selected>Choose a Destination</option>
             <option value="Cairo">Cairo</option>
@@ -235,7 +235,7 @@
 <!-- Plan Trip Section (Korean) -->
 <section id="trip-form-korean" class="fade-in korean">
     <h2>예약문의</h2>
-    <form id="tripFormKorean" action="https://getform.io/f/allldnwa" method="POST">
+    <form id="tripFormKorean">
         <select name="destination" required>
             <option value="" disabled selected>목적지 선택</option>
             <option value="Cairo">카이로</option>
@@ -251,6 +251,34 @@
         <button type="submit">제출</button>
     </form>
 </section>
+
+<!-- Include EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("0wPATTYud4YKNHeh7"); // Replace with your EmailJS user ID
+    })();
+
+    document.getElementById('tripFormEnglish').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('service_stb1w38', 'template_ue5kf3f', this)
+            .then(function() {
+                alert('Your trip plan has been submitted successfully!');
+            }, function(error) {
+                alert('Failed to submit your trip plan. Please try again.');
+            });
+    });
+
+    document.getElementById('tripFormKorean').addEventListener('submit', function(event) {
+        event.preventDefault();
+        emailjs.sendForm('service_stb1w38', 'template_ue5kf3f', this)
+            .then(function() {
+                alert('여행 계획이 성공적으로 제출되었습니다!');
+            }, function(error) {
+                alert('여행 계획 제출에 실패했습니다. 다시 시도해 주세요.');
+            });
+    });
+</script>
 
 <!-- Contact Us Section (English) -->
 <section id="contact" class="fade-in english">
