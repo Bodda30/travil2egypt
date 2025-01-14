@@ -248,7 +248,7 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     (function () {
-        emailjs.init("public_01VhV64gOdkVKx9jQ"); // Replace with your EmailJS user ID
+        emailjs.init("01VhV64gOdkVKx9jQ"); // Replace with your EmailJS user ID
     })();
 
     document.getElementById('tripFormEnglish').addEventListener('submit', function(event) {
