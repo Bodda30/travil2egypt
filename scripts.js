@@ -155,6 +155,15 @@ bookNowButtons.forEach(button => {
     });
 });
 
+// Add event listeners to "Contact Us" buttons in trip recommendations
+const contactButtons = document.querySelectorAll('.contact-button');
+contactButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToContact();
+    });
+});
+
 // Add transition styles
 document.head.insertAdjacentHTML('beforeend', `
     <style>
@@ -232,7 +241,7 @@ viewer.init();
 // Email Submission Logic
 document.getElementById('tripFormEnglish').addEventListener('submit', function(event) {
     event.preventDefault();
-    emailjs.sendForm('service_stb1w38', 'template_sch1m0h', this)
+    emailjs.sendForm('service_stb1w38', 'template_ue5kf3f', this)
         .then(function() {
             alert('Your trip plan has been submitted successfully!');
         }, function(error) {
@@ -242,7 +251,7 @@ document.getElementById('tripFormEnglish').addEventListener('submit', function(e
 
 document.getElementById('tripFormKorean').addEventListener('submit', function(event) {
     event.preventDefault();
-    emailjs.sendForm('service_stb1w38', 'template_sch1m0h', this)
+    emailjs.sendForm('service_stb1w38', 'template_ue5kf3f', this)
         .then(function() {
             alert('여행 계획이 성공적으로 제출되었습니다!');
         }, function(error) {
