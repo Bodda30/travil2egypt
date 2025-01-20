@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Egypt - Trip Recommendations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: pink;
+            text-decoration: none;
+        }
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+        .contact-link span {
+            vertical-align: middle;
+        }
+        .trip-images img {
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 10px 0;
+        }
+        .trip-images img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">Discover Egypt</h1>
+        <button id="language-toggle">Change to Korean</button>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#trip-recommendations" class="nav-link">Trip Recommendations</a>
+        </nav>
+    </header>
+
+    <!-- Trip Recommendations Section -->
+    <section id="trip-recommendations">
+        <h2 class="english">Trip Recommendations</h2>
+        <h2 class="korean">여행 추천</h2>
+        <div class="trip-programs">
+            <div class="trip-item">
+                <h3 class="english">Siwa Oasis</h3>
+                <h3 class="korean">시와 오아시스</h3>
+                <div class="trip-images">
+                    <img src="https://example.com/siwa1.jpg" alt="Siwa Oasis 1">
+                    <img src="https://example.com/siwa2.jpg" alt="Siwa Oasis 2">
+                    <img src="https://example.com/siwa3.jpg" alt="Siwa Oasis 3">
+                    <img src="https://example.com/siwa4.jpg" alt="Siwa Oasis 4">
+                </div>
+                <p class="english">Explore the serene beauty of Siwa Oasis with our guided tours.</p>
+                <p class="korean">가이드 투어로 시와 오아시스의 평화로운 아름다움을 탐험하세요.</p>
+                <button class="contact-button english">Contact Us</button>
+                <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
+            </div>
+            <div class="trip-item">
+                <h3 class="english">Hurghada</h3>
+                <h3 class="korean">후르가다</h3>
+                <div class="trip-images">
+                    <img src="https://example.com/hurghada1.jpg" alt="Hurghada 1">
+                    <img src="https://example.com/hurghada2.jpg" alt="Hurghada 2">
+                    <img src="https://example.com/hurghada3.jpg" alt="Hurghada 3">
+                    <img src="https://example.com/hurghada4.jpg" alt="Hurghada 4">
+                </div>
+                <p class="english">Enjoy the stunning beaches and vibrant marine life in Hurghada.</p>
+                <p class="korean">후르가다의 아름다운 해변과 활기찬 해양 생물을 즐기세요.</p>
+                <button class="contact-button english">Contact Us</button>
+                <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
+            </div>
+            <div class="trip-item">
+                <h3 class="english">Luxor</h3>
+                <h3 class="korean">룩소르</h3>
+                <div class="trip-images">
+                    <img src="https://example.com/luxor1.jpg" alt="Luxor 1">
+                    <img src="https://example.com/luxor2.jpg" alt="Luxor 2">
+                    <img src="https://example.com/luxor3.jpg" alt="Luxor 3">
+                    <img src="https://example.com/luxor4.jpg" alt="Luxor 4">
+                </div>
+                <p class="english">Discover the ancient temples and tombs in Luxor.</p>
+                <p class="korean">룩소르의 고대 사원과 무덤을 발견하세요.</p>
+                <button class="contact-button english">Contact Us</button>
+                <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
+            </div>
+            <div class="trip-item">
+                <h3 class="english">Aswan</h3>
+                <h3 class="korean">아스완</h3>
+                <div class="trip-images">
+                    <img src="https://example.com/aswan1.jpg" alt="Aswan 1">
+                    <img src="https://example.com/aswan2.jpg" alt="Aswan 2">
+                    <img src="https://example.com/aswan3.jpg" alt="Aswan 3">
+                    <img src="https://example.com/aswan4.jpg" alt="Aswan 4">
+                </div>
+                <p class="english">Experience the rich culture and history of Aswan.</p>
+                <p class="korean">아스완의 풍부한 문화와 역사를 경험하세요.</p>
+                <button class="contact-button english">Contact Us</button>
+                <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
+            </div>
+            <div class="trip-item">
+                <h3 class="english">Alexandria</h3>
+                <h3 class="korean">알렉산드리아</h3>
+                <div class="trip-images">
+                    <img src="https://example.com/alexandria1.jpg" alt="Alexandria 1">
+                    <img src="https://example.com/alexandria2.jpg" alt="Alexandria 2">
+                    <img src="https://example.com/alexandria3.jpg" alt="Alexandria 3">
+                    <img src="https://example.com/alexandria4.jpg" alt="Alexandria 4">
+                </div>
+                <p class="english">Visit the historic landmarks and beautiful coastline of Alexandria.</p>
+                <p class="korean">알렉산드리아의 역사적인 랜드마크와 아름다운 해안을 방문하세요.</p>
+                <button class="contact-button english">Contact Us</button>
+                <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
+            </div>
+            <div class="trip-item">
+                <h3 class="english">Marsa Matruh</h3>
+                <h3 class="korean">마르사 마트루</h3>
+                <div class="trip-images">
+                    <img src="https://example.com/marsa1.jpg" alt="Marsa Matruh 1">
+                    <img src="https://example.com/marsa2.jpg" alt="Marsa Matruh 2">
+                    <img src="https://example.com/marsa3.jpg" alt="Marsa Matruh 3">
+                    <img src="https://example.com/marsa4.jpg" alt="Marsa Matruh 4">
+                </div>
+                <p class="english">Relax on the pristine beaches of Marsa Matruh.</p>
+                <p class="korean">마르사 마트루의 깨끗한 해변에서 휴식을 취하세요.</p>
+                <button class="contact-button english">Contact Us</button>
+                <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
+            </div>
+            <div class="trip-item">
+                <h3 class="english">Fayoum</h3>
+                <h3 class="korean">파이윰</h3>
+                <div class="trip-images">
+                    <img src="https://example.com/fayoum1.jpg" alt="Fayoum 1">
+                    <img src="https://example.com/fayoum2.jpg" alt="Fayoum 2">
+                    <img src="https://example.com/fayoum3.jpg" alt="Fayoum 3">
+                    <img src="https://example.com/fayoum4.jpg" alt="Fayoum 4">
+                </div>
+                <p class="english">Explore the natural beauty and wildlife of Fayoum.</p>
+                <p class="korean">파이윰의 자연미와 야생 동물을 탐험하세요.</p>
+                <button class="contact-button english">Contact Us</button>
+                <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section (English) -->
+<section id="contact" class="fade-in english">
+    <h2>Contact Us</h2>
+    <div class="contact-methods">
+        <a href="https://api.whatsapp.com/send?phone=+821071267754" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
+            <span>Contact us on WhatsApp</span>
+        </a>
+        <a href="https://open.kakao.com/o/srA09j9g" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1200px-KakaoTalk_logo.svg.png" class="contact-icon">
+            <span>Contact us on KakaoTalk</span>
+        </a>
+    </div>
+</section>
+
+<!-- Contact Us Section (Korean) -->
+<section id="contact-korean" class="fade-in korean">
+    <h2>문의하기</h2>
+    <div class="contact-methods">
+        <a href="https://api.whatsapp.com/send?phone=+821071267754" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
+            <span>WhatsApp으로 문의하기</span>
+        </a>
+        <a href="https://open.kakao.com/o/srA09j9g" target="_blank" class="contact-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1200px-KakaoTalk_logo.svg.png" class="contact-icon">
+            <span>카카오톡으로 문의하기</span>
+        </a>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Discover Egypt. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init('01VhV64gOdkVKx9jQ'); // Replace with your EmailJS user ID
+        })();
+
+        // Email Submission Logic for English Form
+        document.getElementById('contactFormEnglish').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_stb1w38', 'template_sch1m0h', this)
+                .then(function() {
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    alert('Failed to send your message. Please try again.');
+                });
+        });
+
+        // Email Submission Logic for Korean Form
+        document.getElementById('contactFormKorean').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_stb1w38', 'template_sch1m0h', this)
+                .then(function() {
+                    alert('메시지가 성공적으로 전송되었습니다!');
+                }, function(error) {
+                    alert('메시지 전송에 실패했습니다. 다시 시도해 주세요.');
+                });
+        });
+
+        document.getElementById('language-toggle').addEventListener('click', function() {
+            var englishElements = document.querySelectorAll('.english');
+            var koreanElements = document.querySelectorAll('.korean');
+            englishElements.forEach(function(element) {
+                element.style.display = element.style.display === 'none' ? 'block' : 'none';
+            });
+            koreanElements.forEach(function(element) {
+                element.style.display = element.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
