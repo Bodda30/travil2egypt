@@ -56,8 +56,14 @@
             transform: scale(1.1);
         }
         .trip-item {
-            margin: 20px 0;
+            margin: 40px 0;
             text-align: center;
+        }
+        .trip-item h3 {
+            margin-bottom: 20px;
+        }
+        .trip-item p {
+            margin-top: 10px;
         }
         .contact-button {
             margin-top: 10px;
@@ -70,17 +76,49 @@
         .contact-button:hover {
             background-color: #ff1493;
         }
+        .divider {
+            height: 2px;
+            background-color: #ff69b4;
+            margin: 40px 0;
+        }
         @media (min-width: 768px) {
             .trip-item {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                flex-wrap: wrap;
             }
             .trip-item h3, .trip-item p, .trip-item .contact-button {
-                flex: 1;
+                flex: 1 1 100%;
             }
             .trip-images {
-                flex: 2;
+                flex: 1 1 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .trip-images img {
+                flex: 1 1 calc(25% - 20px);
+                margin: 10px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .trip-item {
+                flex-direction: row;
+                text-align: left;
+            }
+            .trip-item h3, .trip-item p, .trip-item .contact-button {
+                flex: 1 1 auto;
+            }
+            .trip-images {
+                flex: 1 1 auto;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            .trip-images img {
+                flex: 1 1 calc(20% - 20px);
+                margin: 10px;
             }
         }
     </style>
@@ -105,93 +143,127 @@
                 <h3 class="korean">시와 오아시스</h3>
                 <div class="trip-images">
                     <img src="https://example.com/siwa1.jpg" alt="Siwa Oasis 1">
+                    <p>Siwa Oasis 1</p>
                     <img src="https://example.com/siwa2.jpg" alt="Siwa Oasis 2">
+                    <p>Siwa Oasis 2</p>
                     <img src="https://example.com/siwa3.jpg" alt="Siwa Oasis 3">
+                    <p>Siwa Oasis 3</p>
                     <img src="https://example.com/siwa4.jpg" alt="Siwa Oasis 4">
+                    <p>Siwa Oasis 4</p>
                 </div>
                 <p class="english">Explore the serene beauty of Siwa Oasis with our guided tours.</p>
                 <p class="korean">가이드 투어로 시와 오아시스의 평화로운 아름다움을 탐험하세요.</p>
                 <button class="contact-button english">Contact Us</button>
                 <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
             </div>
+            <div class="divider"></div>
             <div class="trip-item">
                 <h3 class="english">Hurghada</h3>
                 <h3 class="korean">후르가다</h3>
                 <div class="trip-images">
                     <img src="https://example.com/hurghada1.jpg" alt="Hurghada 1">
+                    <p>Hurghada 1</p>
                     <img src="https://example.com/hurghada2.jpg" alt="Hurghada 2">
+                    <p>Hurghada 2</p>
                     <img src="https://example.com/hurghada3.jpg" alt="Hurghada 3">
+                    <p>Hurghada 3</p>
                     <img src="https://example.com/hurghada4.jpg" alt="Hurghada 4">
+                    <p>Hurghada 4</p>
                 </div>
                 <p class="english">Enjoy the stunning beaches and vibrant marine life in Hurghada.</p>
                 <p class="korean">후르가다의 아름다운 해변과 활기찬 해양 생물을 즐기세요.</p>
                 <button class="contact-button english">Contact Us</button>
                 <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
             </div>
+            <div class="divider"></div>
             <div class="trip-item">
                 <h3 class="english">Luxor</h3>
                 <h3 class="korean">룩소르</h3>
                 <div class="trip-images">
                     <img src="https://example.com/luxor1.jpg" alt="Luxor 1">
+                    <p>Luxor 1</p>
                     <img src="https://example.com/luxor2.jpg" alt="Luxor 2">
+                    <p>Luxor 2</p>
                     <img src="https://example.com/luxor3.jpg" alt="Luxor 3">
+                    <p>Luxor 3</p>
                     <img src="https://example.com/luxor4.jpg" alt="Luxor 4">
+                    <p>Luxor 4</p>
                 </div>
                 <p class="english">Discover the ancient temples and tombs in Luxor.</p>
                 <p class="korean">룩소르의 고대 사원과 무덤을 발견하세요.</p>
                 <button class="contact-button english">Contact Us</button>
                 <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
             </div>
+            <div class="divider"></div>
             <div class="trip-item">
                 <h3 class="english">Aswan</h3>
                 <h3 class="korean">아스완</h3>
                 <div class="trip-images">
                     <img src="https://example.com/aswan1.jpg" alt="Aswan 1">
+                    <p>Aswan 1</p>
                     <img src="https://example.com/aswan2.jpg" alt="Aswan 2">
+                    <p>Aswan 2</p>
                     <img src="https://example.com/aswan3.jpg" alt="Aswan 3">
+                    <p>Aswan 3</p>
                     <img src="https://example.com/aswan4.jpg" alt="Aswan 4">
+                    <p>Aswan 4</p>
                 </div>
                 <p class="english">Experience the rich culture and history of Aswan.</p>
                 <p class="korean">아스완의 풍부한 문화와 역사를 경험하세요.</p>
                 <button class="contact-button english">Contact Us</button>
                 <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
             </div>
+            <div class="divider"></div>
             <div class="trip-item">
                 <h3 class="english">Alexandria</h3>
                 <h3 class="korean">알렉산드리아</h3>
                 <div class="trip-images">
                     <img src="https://example.com/alexandria1.jpg" alt="Alexandria 1">
+                    <p>Alexandria 1</p>
                     <img src="https://example.com/alexandria2.jpg" alt="Alexandria 2">
+                    <p>Alexandria 2</p>
                     <img src="https://example.com/alexandria3.jpg" alt="Alexandria 3">
+                    <p>Alexandria 3</p>
                     <img src="https://example.com/alexandria4.jpg" alt="Alexandria 4">
+                    <p>Alexandria 4</p>
                 </div>
                 <p class="english">Visit the historic landmarks and beautiful coastline of Alexandria.</p>
                 <p class="korean">알렉산드리아의 역사적인 랜드마크와 아름다운 해안을 방문하세요.</p>
                 <button class="contact-button english">Contact Us</button>
                 <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
             </div>
+            <div class="divider"></div>
             <div class="trip-item">
                 <h3 class="english">Marsa Matruh</h3>
                 <h3 class="korean">마르사 마트루</h3>
                 <div class="trip-images">
                     <img src="https://example.com/marsa1.jpg" alt="Marsa Matruh 1">
+                    <p>Marsa Matruh 1</p>
                     <img src="https://example.com/marsa2.jpg" alt="Marsa Matruh 2">
+                    <p>Marsa Matruh 2</p>
                     <img src="https://example.com/marsa3.jpg" alt="Marsa Matruh 3">
+                    <p>Marsa Matruh 3</p>
                     <img src="https://example.com/marsa4.jpg" alt="Marsa Matruh 4">
+                    <p>Marsa Matruh 4</p>
                 </div>
                 <p class="english">Relax on the pristine beaches of Marsa Matruh.</p>
                 <p class="korean">마르사 마트루의 깨끗한 해변에서 휴식을 취하세요.</p>
                 <button class="contact-button english">Contact Us</button>
                 <button class="contact-button korean" onclick="location.href='#contact-korean'">문의하기</button>
             </div>
+            <div class="divider"></div>
             <div class="trip-item">
                 <h3 class="english">Fayoum</h3>
                 <h3 class="korean">파이윰</h3>
                 <div class="trip-images">
                     <img src="https://example.com/fayoum1.jpg" alt="Fayoum 1">
+                    <p>Fayoum 1</p>
                     <img src="https://example.com/fayoum2.jpg" alt="Fayoum 2">
+                    <p>Fayoum 2</p>
                     <img src="https://example.com/fayoum3.jpg" alt="Fayoum 3">
+                    <p>Fayoum 3</p>
                     <img src="https://example.com/fayoum4.jpg" alt="Fayoum 4">
+                    <p>Fayoum 4</p>
                 </div>
                 <p class="english">Explore the natural beauty and wildlife of Fayoum.</p>
                 <p class="korean">파이윰의 자연미와 야생 동물을 탐험하세요.</p>
