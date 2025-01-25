@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="https://cdn.pixabay.com/video/2022/10/14/134837-760690993_large.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
     <header>
         <h1 id="header-title">Discover Egypt</h1>
         <button id="language-toggle">Change to Korean</button>
@@ -113,12 +117,28 @@
         </div>
     </section>
 
-    <!-- Add a button to redirect to the trips page -->
-    <section id="Our Tours" class="fade-in">
-        <h2 class="english">Explore Our Trip Recommendations</h2>
-        <h2 class="korean">여행 추천 보기</h2>
-        <button onclick="window.location.href='trips.html'" class="explore-button english">Explore Trips</button>
-        <button onclick="window.location.href='trips.html'" class="explore-button korean">여행 보기</button>
+    <!-- English Tours Section -->
+    <section id="Our Tours" class="fade-in english">
+        <h2>Explore Our Trip Recommendations</h2>
+        <button onclick="window.location.href='trips.html'" class="explore-button">Explore Trips</button>
+    </section>
+
+    <!-- Korean Tours Section -->
+    <section id="Our Tours-korean" class="fade-in korean">
+        <h2>여행 추천 보기</h2>
+        <button onclick="window.location.href='trips.html'" class="explore-button">여행 보기</button>
+    </section>
+
+    <!-- English City Tours Section -->
+    <section id="city-to-city-tours" class="fade-in english">
+        <h2>Disover more than city</h2>
+        <button onclick="window.location.href='city-to-city-tours.html'" class="explore-button">Explore City to City Tours</button>
+    </section>
+
+    <!-- Korean City Tours Section -->
+    <section id="city-to-city-tours-korean" class="fade-in korean">
+        <h2>도시 간 투어</h2>
+        <button onclick="window.location.href='city-to-city-tours.html'" class="explore-button">도시 간 투어 보기</button>
     </section>
 
     <!-- Services Section -->
@@ -154,30 +174,31 @@
             <div class="service-item">
                 <span>공항 픽업 서비스</span>
                 <span class="price">25 US$</span>
-                <!-- Removed button -->
+                <button class="service-button">문의하기</button>
             </div>
             <div class="service-item">
                 <span>카이로 시티 투어</span>
                 <span class="price">60 US 부터</span>
-                <!-- Removed button -->
+                <button class="service-button">문의하기</button>
             </div>
             <div class="service-item">
                 <span>다른지역 맞춤투어(맞춤투어)</span>
                 <span class="price">문의하기</span>
-                <!-- Removed button -->
+                <button class="service-button">문의하기</button>
             </div>
             <div class="service-item">
                 <span>시와 왕복차량</span>
                 <span class="price">300 US 부터</span>
-                <!-- Removed button -->
+                <button class="service-button">문의하기</button>
             </div>
     
             <div class="service-item">
                <span>룩소르, 아스완 맞춤 일정가능</span>
-            
-               <!-- Removed button -->
-               <div class="service-item">
-                   <span>카카오톡으로 모든 여정 문의시 할인가능</span>
+               <button class="service-button">문의하기</button>
+           </div>
+           <div class="service-item">
+               <span>카카오톡으로 모든 여정 문의시 할인가능</span>
+               <button class="service-button">카카오톡으로 문의하기</button>
            </div>
         </div>
     </section>
@@ -207,6 +228,13 @@
             <h3 class="korean">벤 </h3>
             <p class="english">for more 5people</p>
             <p class="korean">5 인 이상을 위한 차량 (최대 10명)</p>
+        </div>
+        <div class="car-item">
+            <img src="https://images.unsplash.com/photo-1680843274944-40433b411e2b?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="luxury">
+            <h3 class="english">luxury</h3>
+            <h3 class="korean">luxury</h3>
+            <p class="english">For the VIP tours maximum 2 persons</p>
+            <p class="korean"> 안전하고 편안한 여정을 위한 차량</p>
         </div>
     </div>
 </section>
@@ -326,8 +354,12 @@
     </div>
 
     <script src="scripts.js"></script>
-
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
         .contact-methods {
             display: flex;
             flex-direction: column;

@@ -12,10 +12,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background: var(--gradient-primary);
+    background: linear-gradient(to right, #ffb6c1, #ff69b4);
     color: #ffffff; /* Ensured text color is white */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: var(--border-radius);
+    background: var(--gradient-primary);
     backdrop-filter: blur(5px);
     transition: var(--transition-smooth);
 }
@@ -43,22 +44,26 @@ nav a:hover {
 
 /* Language Button */
 #language-toggle {
-    background: rgba(255, 105, 180, 0.1);
+    background: #ffb6c1;
     color: #000000; /* Ensured text color is black */
-    border: 1px solid rgba(255, 105, 180, 0.3);
-    padding: 12px 24px;
+    border: none;
+    padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: var(--border-radius);
     margin-left: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 105, 180, 0.1);
     backdrop-filter: blur(5px);
     transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    padding: 12px 24px;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
 
 #language-toggle:hover {
+    background: #ff69b4;
     background: var(--gradient-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-soft);
@@ -95,8 +100,9 @@ section p {
 /* Plan Your Trip Form */
 #tripForm {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     width: 100%;
     max-width: 1200px;
@@ -104,39 +110,28 @@ section p {
     padding: 20px;
 }
 
-#tripForm .form-group {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 500px;
-    margin: 10px 0;
-}
-
-#tripForm .form-group label {
-    margin-bottom: 5px;
-    color: #ffb6c1;
-}
-
 #tripForm select,
 #tripForm input,
 #tripForm textarea,
 #tripForm button {
     width: 100%;
-    padding: 15px;
+    max-width: 500px; /* Increased max-width for better alignment */
+    margin: 10px 0;
+    padding: 15px; /* Increased padding for better appearance */
     border: none;
     border-radius: var(--border-radius);
     font-size: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background: #333333;
-    color: #ffb6c1;
+    background: #333333; /* Dark background */
+    color: #ffb6c1; /* Pink text */
     transition: var(--transition-smooth);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 105, 180, 0.2);
 }
 
 #tripForm select option {
-    background: #333333;
-    color: #ffb6c1;
+    background: #333333; /* Dark background */
+    color: #ffb6c1; /* Pink text */
 }
 
 #tripForm button {
@@ -147,6 +142,75 @@ section p {
 
 #tripForm button:hover {
     background: #ff1493;
+}
+
+/* Ensure all form fields are aligned */
+#tripForm .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Increased max-width for better alignment */
+    margin: 10px 0;
+}
+
+#tripForm .form-group label {
+    margin-bottom: 5px;
+    color: #ffb6c1;
+}
+
+#tripForm .form-group input,
+#tripForm .form-group select,
+#tripForm .form-group textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding for better appearance */
+    border: none;
+    border-radius: var(--border-radius);
+    background: #333333;
+    color: #ffb6c1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+/* Plan Your Trip Form */
+#tripForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#tripForm .form-group {
+    flex: 1;
+    min-width: 200px;
+    margin: 0;
+}
+
+#tripForm select,
+#tripForm input,
+#tripForm textarea,
+#tripForm button {
+    width: 100%;
+    margin: 0;
+    min-width: 150px;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    #tripForm {
+        flex-direction: column;
+    }
+    
+    #tripForm .form-group {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 
 /* Our Services Section */
@@ -175,7 +239,7 @@ section p {
 }
 
 .service-item {
-    background: rgba(51, 51, 51, 0.8); /* Dark background */
+    background: #333333; /* Dark background */
     color: #ffb6c1; /* Pink text */
     padding: 20px;
     border-radius: var(--border-radius);
@@ -185,6 +249,7 @@ section p {
     flex: 1;
     min-width: 250px;
     max-width: 300px;
+    background: rgba(51, 51, 51, 0.8);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 105, 180, 0.2);
     transition: var(--transition-smooth);
@@ -226,22 +291,26 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: rgba(255, 105, 180, 0.1);
+    background: #ffb6c1;
     color: #000000; /* Ensured text color is black */
-    border: 1px solid rgba(255, 105, 180, 0.3);
-    padding: 12px 24px;
+    border: none;
+    padding: 10px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: var(--border-radius);
     display: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 105, 180, 0.1);
     backdrop-filter: blur(5px);
     transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    padding: 12px 24px;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
 
 #back-to-top:hover {
+    background: #ff69b4;
     background: var(--gradient-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-soft);
@@ -660,12 +729,14 @@ button:focus {
 /* Service Items */
 .service-item button,
 .service-button {
-    background: rgba(255, 105, 180, 0.1);
+    background: rgba(51, 51, 51, 0.8);
     color: #ffb6c1;
     border: 1px solid rgba(255, 105, 180, 0.3);
     border-radius: var(--border-radius);
+    background: rgba(255, 105, 180, 0.1);
     backdrop-filter: blur(5px);
     transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 105, 180, 0.3);
     padding: 12px 24px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -673,6 +744,8 @@ button:focus {
 
 .service-item button:hover,
 .service-button:hover {
+    background: #ff69b4;
+    color: #ffffff;
     background: var(--gradient-primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow-soft);
@@ -798,100 +871,3 @@ textarea:focus {
     color: #ccc;
     text-align: center;
   }
-
-/* Choose Your Car Section */
-#chooseCar {
-    padding: 40px 20px;
-    background: #1e1e1e; /* Dark background for sections */
-    text-align: center;
-    transition: opacity 0.5s ease-in-out;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
-    backdrop-filter: blur(5px);
-    transition: var(--transition-smooth);
-}
-
-#chooseCar h2 {
-    color: #ffb6c1;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#chooseCar .car-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-#chooseCar .car-item {
-    background: rgba(51, 51, 51, 0.8); /* Dark background */
-    color: #ffb6c1; /* Pink text */
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 105, 180, 0.2);
-    transition: var(--transition-smooth);
-}
-
-#chooseCar .car-item img {
-    width: 100%;
-    border-radius: var(--border-radius);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#chooseCar .car-item:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-soft);
-    border-color: rgba(255, 105, 180, 0.4);
-}
-
-#chooseCar .car-item h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #ffb6c1;
-}
-
-#chooseCar .car-item p {
-    font-size: 1rem;
-    color: #ffb6c1;
-}
-
-/* Responsive Design for Choose Your Car Section */
-@media (max-width: 768px) {
-    #chooseCar .car-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #chooseCar .car-item {
-        max-width: 100%;
-    }
-}
-
-/* ...existing styles... */
-.explore-button {
-    display: block;
-    margin: 20px auto;
-    padding: 15px 30px;
-    background-color: #ff69b4;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-.explore-button:hover {
-    background-color: #ff1493;
-}
-/* ...existing styles... */

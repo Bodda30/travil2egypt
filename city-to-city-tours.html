@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City to City Tours - Discover Egypt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Same video as index.html -->
+    <video autoplay muted loop id="background-video">
+        <source src="https://cdn.pixabay.com/video/2022/10/14/134837-760690993_large.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <header>
+        <h1 id="header-title">Discover Egypt</h1>
+        <button id="language-toggle">Change to Korean</button>
+        <nav class="english">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Tours</a>
+            <a href="#tours" class="nav-link">Available Tours</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <nav class="korean" style="display: none;">
+            <a href="index.html" class="nav-link">홈</a>
+            <a href="#about-korean" class="nav-link">투어 소개</a>
+            <a href="#tours-korean" class="nav-link">투어 목록</a>
+            <a href="#contact-korean" class="nav-link">문의하기</a>
+        </nav>
+    </header>
+
+    <!-- English Content -->
+    <div class="english">
+        <section id="about" class="fade-in">
+            <h2>City to City Tours</h2>
+            <p>Experience the diverse landscapes and rich history of Egypt as you journey between its magnificent cities.</p>
+        </section>
+
+        <section id="tours" class="fade-in">
+            <h2>Available Tours</h2>
+            <div class="tour-cards">
+                <div class="tour-card">
+                    <h3>Cairo to Luxor</h3>
+                    <img src="https://i.imgur.com/WML0Xd6.png" alt="Cairo to Luxor route" class="route-map">
+                    <p>Duration: 2 Days</p>
+                    <p>Distance: 671 km</p>
+                    <p>Route: Cairo → Luxor (overnight journey)</p>
+                    <button class="contact-button">Contact for Details</button>
+                </div>
+                <div class="tour-card">
+                    <h3>Luxor to Aswan</h3>
+                    <img src="https://i.imgur.com/Rk7pGVm.png" alt="Luxor to Aswan route" class="route-map">
+                    <p>Duration: 1 Day</p>
+                    <p>Distance: 220 km</p>
+                    <p>Route: Luxor → Edfu → Kom Ombo → Aswan</p>
+                    <button class="contact-button">Contact for Details</button>
+                </div>
+                <div class="tour-card">
+                    <h3>Cairo to Alexandria</h3>
+                    <img src="https://i.imgur.com/dNVjrUJ.png" alt="Cairo to Alexandria route" class="route-map">
+                    <p>Duration: 1 Day</p>
+                    <p>Distance: 220 km</p>
+                    <p>Route: Cairo → Alexandria (direct)</p>
+                    <button class="contact-button">Contact for Details</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Korean Content -->
+    <div class="korean" style="display: none;">
+        <section id="about-korean" class="fade-in">
+            <h2>도시 간 투어</h2>
+            <p>이집트의 다양한 풍경과 풍부한 역사를 도시 간 여행을 통해 경험해보세요.</p>
+        </section>
+
+        <section id="tours-korean" class="fade-in">
+            <h2>이용 가능한 투어</h2>
+            <div class="tour-cards">
+                <div class="tour-card">
+                    <h3>카이로에서 룩소르</h3>
+                    <img src="https://i.imgur.com/WML0Xd6.png" alt="카이로-룩소르 경로" class="route-map">
+                    <p>소요 시간: 2일</p>
+                    <p>거리: 671 km</p>
+                    <p>경로: 카이로 → 룩소르 (1박)</p>
+                    <button class="contact-button">문의하기</button>
+                </div>
+                <div class="tour-card">
+                    <h3>룩소르에서 아스완</h3>
+                    <img src="https://i.imgur.com/Rk7pGVm.png" alt="룩소르-아스완 경로" class="route-map">
+                    <p>소요 시간: 1일</p>
+                    <p>거리: 220 km</p>
+                    <p>경로: 룩소르 → 에드푸 → 콤옴보 → 아스완</p>
+                    <button class="contact-button">문의하기</button>
+                </div>
+                <div class="tour-card">
+                    <h3>카이로에서 알렉산드리아</h3>
+                    <img src="https://i.imgur.com/dNVjrUJ.png" alt="카이로-알렉산드리아 경로" class="route-map">
+                    <p>소요 시간: 1일</p>
+                    <p>거리: 220 km</p>
+                    <p>경로: 카이로 → 알렉산드리아 (직행)</p>
+                    <button class="contact-button">문의하기</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+     <!-- Contact Us Section (English) -->
+<section id="contact" class="fade-in english">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-methods">
+                <a href="https://api.whatsapp.com/send?phone=+821071267754" target="_blank" class="contact-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
+                    <span>Contact us on WhatsApp</span>
+                </a>
+                <a href="https://open.kakao.com/o/srA09j9g" target="_blank" class="contact-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1200px-KakaoTalk_logo.svg.png" class="contact-icon">
+                    <span>Contact us on KakaoTalk</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us Section (Korean) -->
+<section id="contact-korean" class="fade-in korean">
+    <h2>문의하기</h2>
+    <div class="contact-container">
+        <div class="contact-card">
+            <div class="contact-methods">
+                <a href="https://api.whatsapp.com/send?phone=+821071267754" target="_blank" class="contact-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" class="contact-icon">
+                    <span>WhatsApp으로 문의하기</span>
+                </a>
+                <a href="https://open.kakao.com/o/srA09j9g" target="_blank" class="contact-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/KakaoTalk_logo.svg/1200px-KakaoTalk_logo.svg.png" class="contact-icon">
+                    <span>카카오톡으로 문의하기</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Discover Egypt. All rights reserved.</p>
+    </footer>
+
+    <button id="back-to-top">Top</button>
+
+    <script src="scripts.js"></script>
+    <style>
+        /* Matching styles from index.html */
+        .tour-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .tour-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            text-align: center;
+        }
+        
+        .tour-card h3 {
+            color: #bfb9b9;
+            margin-bottom: 10px;
+        }
+        
+        .contact-button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-button:hover {
+            background-color: #ff1493;
+        }
+
+        .route-map {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        
+        .tour-card p {
+            margin: 5px 0;
+            color: #e3dada;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .contact-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            text-align: center;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #e3dada;
+            font-size: 18px;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+        }
+    </style>
+</body>
+</html>

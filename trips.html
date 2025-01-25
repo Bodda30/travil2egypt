@@ -11,12 +11,18 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: transparent; /* Ensure background is transparent */
         }
         header, footer {
             text-align: center;
             padding: 10px;
-            background-color: #131212;
+            background-color: rgba(19, 18, 18, 0.8); /* Make header and footer semi-transparent */
             color: #fff;
+            position: relative;
+            z-index: 1;
         }
         footer a {
             color: pink;
@@ -58,6 +64,11 @@
         .trip-item {
             margin: 40px 0;
             text-align: center;
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.5); /* Make trip items semi-transparent */
+            padding: 20px;
+            border-radius: 10px;
         }
         .trip-item h3 {
             margin-bottom: 20px;
@@ -121,9 +132,49 @@
                 margin: 10px;
             }
         }
+        header {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        video#background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        header h1, header button, header nav {
+            position: relative;
+            z-index: 1;
+        }
+        header::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 0;
+        }
+        section {
+            background: rgba(0, 0, 0, 0.2); /* Make sections semi-transparent */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
+    <video id="background-video" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2022/10/14/134837-760690993_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <header>
         <h1 id="header-title">Discover Egypt</h1>
         <button id="language-toggle">Change to Korean</button>
